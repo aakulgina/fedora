@@ -45,7 +45,7 @@ timezone Australia/Sydney
 user --name=sina --password=$userpass --groups=wheel
 
 # Set Root Password
-rootpw --lock
+rootpw $fedora
 
 # Perform Installation in Text Mode
 text
