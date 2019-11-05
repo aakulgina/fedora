@@ -27,7 +27,7 @@ clearpart --all --drives=sda
 firewall --enabled --ssh
 
 # Configure Network Interfaces
-network --onboot=yes --bootproto=dhcp --hostname=fedora
+network --onboot=yes --bootproto=dhcp --hostname=w12-416-3
 
 # Configure Keyboard Layouts
 keyboard us
