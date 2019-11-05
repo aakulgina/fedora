@@ -27,7 +27,7 @@ clearpart --all --drives=sda
 firewall --enabled --ssh
 
 # Configure Network Interfaces
-network --onboot=yes --bootproto=dhcp --hostname=sina-laptop
+network --onboot=yes --bootproto=dhcp --hostname=fedora
 
 # Configure Keyboard Layouts
 keyboard us
