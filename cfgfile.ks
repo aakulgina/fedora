@@ -27,7 +27,7 @@ clearpart --all --drives=sda
 firewall --enabled --ssh
 
 # Configure Network Interfaces
-network --onboot=yes --bootproto=dhcp --hostname=anastasiia_k
+network --onboot=yes --bootproto=dhcp
 
 # Configure Keyboard Layouts
 keyboard us
