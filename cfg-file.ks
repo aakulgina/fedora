@@ -65,7 +65,7 @@ text
 @xfce-desktop
 @development-tools
 @python-classroom
-@gnome-desktop-environment
+@GNOME Desktop Environment
 chromium
 java-latest-openjdk
 vim
