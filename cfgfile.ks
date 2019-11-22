@@ -30,7 +30,7 @@ firewall --enabled --ssh
 network --onboot=yes --bootproto=dhcp
 
 # Configure Keyboard Layouts
-keyboard us
+keyboard us, ru
 
 # Configure Language During Installation
 lang en_AU
@@ -39,7 +39,7 @@ lang en_AU
 xconfig --startxonboot
 
 # Configure Time Zone
-timezone Australia/Sydney
+timezone Russia/Volgograd
 
 # Create User Account
 user --name=maxrom --password=$qwertynbvcxz --groups=wheel
@@ -64,7 +64,12 @@ text
 @printing
 @xfce-desktop
 @development-tools
+@python-classroom
+@gnome-desktop-environment
+chromium
+java-latest-openjdk
 vim
+git
 NetworkManager-openvpn-gnome
 keepassx
 redshift-gtk
