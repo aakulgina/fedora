@@ -30,7 +30,7 @@ firewall --enabled --ssh
 network --onboot=yes --bootproto=dhcp
 
 # Configure Keyboard Layouts
-keyboard us, ru
+keyboard us
 
 # Configure Language During Installation
 lang en_AU
