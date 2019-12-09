@@ -64,12 +64,12 @@ text
 @printing
 @xfce-desktop
 @development-tools
-@python-classroom
-@GNOME Desktop Environment
-chromium
-java-latest-openjdk
+#@python-classroom
+#@GNOME Desktop Environment
+#chromium
+#java-latest-openjdk
 vim
-git
+#git
 NetworkManager-openvpn-gnome
 keepassx
 redshift-gtk
@@ -138,6 +138,11 @@ gpgkey=https://dl-ssl.google.com/linux/linux_signing_key.pub
 EOF
 rpm --import https://dl-ssl.google.com/linux/linux_signing_key.pub
 dnf install -y google-chrome-stable
+
+# Install Docker
+dnf -y install dnf-plugins-core
+dnf config-manager --add-repo https://download.docker.com/linux/fedora/docker-ce.repo
+dnf install docker-ce docker-ce-cli containerd.io
 
 # Harden sshd options
 echo "" > /etc/ssh/sshd_config
