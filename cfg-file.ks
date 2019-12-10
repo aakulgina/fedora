@@ -142,7 +142,7 @@ dnf install -y google-chrome-stable
 # Install Docker
 dnf -y install dnf-plugins-core
 dnf config-manager --add-repo https://download.docker.com/linux/fedora/docker-ce.repo
-dnf install docker-ce docker-ce-cli containerd.io
+dnf -y install docker-ce docker-ce-cli containerd.io
 
 # Harden sshd options
 echo "" > /etc/ssh/sshd_config
