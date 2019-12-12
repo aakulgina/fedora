@@ -148,7 +148,7 @@ systemctl start docker.service
 
 # Install Jenkins
 docker run \
-  --name jenkins-blueocean
+  --name jenkins-blueocean \
   -u root \
   --rm \
   -d \
