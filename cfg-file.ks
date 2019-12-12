@@ -146,6 +146,18 @@ dnf -y install docker-ce docker-ce-cli containerd.io
 systemctl enable docker.service
 systemctl start docker.service
 
+# Install Jenkins
+docker run \
+  --name jenkins-blueocean
+  -u root \
+  --rm \
+  -d \
+  -p 8080:8080 \
+  -p 50000:50000 \
+  -v jenkins-data:/var/jenkins_home \
+  -v /var/run/docker.sock:/var/run/docker.sock \
+  jenkinsci/blueocean
+
 # Harden sshd options
 echo "" > /etc/ssh/sshd_config
 
