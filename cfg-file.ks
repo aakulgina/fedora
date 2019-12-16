@@ -147,16 +147,7 @@ systemctl enable docker.service
 systemctl start docker.service
 
 # Install Jenkins
-sudo wget -O /etc/yum.repos.d/jenkins.repo http://pkg.jenkins-ci.org/redhat/jenkins.repo
-sudo rpm --import http://pkg.jenkins-ci.org/redhat/jenkins-ci.org.key
-sudo yum install jenkins
-sudo service jenkins start/stop/restart
-sudo service jenkins start
-sudo usermod -s /bin/bash jenkins
-sudo usermod -m /var/lib/jenkins jenkins
-sudo su - jenkins
-curl -L https://get.rvm.io | bash -s stable --rails --autolibs=enabled
-vi /var/lib/jenkins/.bashrc
+
 
 # Harden sshd options
 echo "" > /etc/ssh/sshd_config
