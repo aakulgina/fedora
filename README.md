@@ -12,3 +12,4 @@
 10. https://wiki.jenkins.io/display/JENKINS/Installing+Jenkins+on+Red+Hat+distributions
 11. https://gist.github.com/prathamesh-sonpatki/5428304
 12. https://wiki.jenkins.io/display/JENKINS/Installing+Jenkins+with+Docker
+13. https://computingforgeeks.com/running-jenkins-server-in-docker-container-systemd/
