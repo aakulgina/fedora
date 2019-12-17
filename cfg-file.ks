@@ -147,7 +147,15 @@ systemctl enable docker.service
 systemctl start docker.service
 
 # Install Jenkins
-
+docker pull jenkins
+export CONFIG_FOLDER=/opt/jenkins/config
+mkdir $CONFIG_FOLDER
+chown 1000 $CONFIG_FOLDER
+docker start --restart=always -p 49001:8080 \ -p 8080:8080 \
+-p 50000:50000 \
+-v $CONFIG_FOLDER:/var/jenkins_home:z \
+--name jenkins -t jenkins
+# docker logs --follow jenkins
 
 # Harden sshd options
 echo "" > /etc/ssh/sshd_config
@@ -195,4 +203,4 @@ sed -i 's/Disabled=false/Disabled=true/g' /etc/xdg/tumbler/tumbler.rc
 %end
 
 # Reboot After Installation
-reboot --eject
+# reboot --eject
