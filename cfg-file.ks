@@ -151,8 +151,8 @@ curl -O https://raw.githubusercontent.com/aakulgina/fedora/master/jenkins_autost
 mv ./jenkins_autostart.sh /usr/local/bin/ 
 sudo chmod u+x /usr/local/bin/jenkins_autostart.sh
 curl -O https://raw.githubusercontent.com/aakulgina/fedora/master/jenkins.service
-mv ./jenkins.service /lib/systemd/system/
-sudo chmod 644 /lib/systemd/system/jenkins.service
+mv ./jenkins.service /etc/systemd/system/
+sudo chmod 644 /etc/systemd/system/jenkins.service
 sudo systemctl daemon-reload
 sudo systemctl enable jenkins.service
 
