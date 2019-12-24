@@ -1,0 +1,10 @@
+[Unit]
+Description= Running Jenkins Service
+After=multi-user.target
+
+[Service]
+Type=idle
+ExecStart=/usr/bin/local/jenkins_autostart.sh
+
+[Install]
+WantedBy=multi-user.target
