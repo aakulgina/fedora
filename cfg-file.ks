@@ -148,8 +148,8 @@ systemctl start docker.service
 
 # Install Jenkins
 curl -O https://raw.githubusercontent.com/aakulgina/fedora/master/jenkins_autostart.sh
-mv ./jenkins_autostart.sh /usr/bin/local/ 
-sudo chmod u+x /usr/bin/local/jenkins_autostart.sh
+mv ./jenkins_autostart.sh /usr/local/bin/ 
+sudo chmod u+x /usr/local/bin/jenkins_autostart.sh
 curl -O https://raw.githubusercontent.com/aakulgina/fedora/master/jenkins.service
 mv ./jenkins.service /lib/systemd/system/
 sudo chmod 644 /lib/systemd/system/jenkins.service
