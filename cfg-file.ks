@@ -147,16 +147,14 @@ systemctl enable docker.service
 systemctl start docker.service
 
 # Install Jenkins
-chmod +x ./jenkins_autostart.sh
-# docker pull jenkins
-# export CONFIG_FOLDER=/opt/jenkins/config
-# mkdir $CONFIG_FOLDER
-# chown 1000 $CONFIG_FOLDER
-# docker start --restart=always -p 49001:8080 \ -p 8080:8080 \
-# -p 50000:50000 \
-# -v $CONFIG_FOLDER:/var/jenkins_home:z \
-# --name jenkins -t jenkins
-# docker logs --follow jenkins
+curl -O https://raw.githubusercontent.com/aakulgina/fedora/master/jenkins_autostart.sh
+mv ./jenkins_autostart.sh /usr/bin/local/ 
+sudo chmod u+x /usr/bin/local/jenkins_autostart.sh
+curl -O https://raw.githubusercontent.com/aakulgina/fedora/master/jenkins.service
+mv ./jenkins.service /lib/systemd/system/
+sudo chmod 644 /lib/systemd/system/jenkins.service
+sudo systemctl daemon-reload
+sudo systemctl enable jenkins.service
 
 # Harden sshd options
 echo "" > /etc/ssh/sshd_config
