@@ -7,3 +7,4 @@ docker start --restart=always -p 49001:8080 \ -p 8080:8080 \
 -p 50000:50000 \
 -v $CONFIG_FOLDER:/var/jenkins_home:z \
 --name jenkins -t jenkins
+sudo systemctl disable jenkins.service
