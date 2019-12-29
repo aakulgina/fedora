@@ -13,3 +13,7 @@ a note for future use
 11. https://gist.github.com/prathamesh-sonpatki/5428304
 12. https://wiki.jenkins.io/display/JENKINS/Installing+Jenkins+with+Docker
 13. https://computingforgeeks.com/running-jenkins-server-in-docker-container-systemd/
+14. https://gerrit-review.googlesource.com/Documentation/linux-quickstart.html
+15. https://gerrit-review.googlesource.com/Documentation/install.html
+16. https://gerrit-releases.storage.googleapis.com/index.html
+17. https://github.com/GerritCodeReview/docker-gerrit
