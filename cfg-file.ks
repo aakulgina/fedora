@@ -146,7 +146,7 @@ dnf -y install docker-ce docker-ce-cli containerd.io
 systemctl enable docker.service
 systemctl start docker.service
 
-# Install Jenkins
+# Trying to Install Jenkins
 curl -O https://raw.githubusercontent.com/aakulgina/fedora/master/jenkins_autostart.sh
 mv ./jenkins_autostart.sh /usr/local/bin/ 
 sudo chmod u+x /usr/local/bin/jenkins_autostart.sh
@@ -155,7 +155,6 @@ sudo chmod u+x /usr/local/bin/jenkins_autostart.sh
 #sudo chmod 644 /etc/systemd/system/jenkins.service
 #sudo systemctl daemon-reload
 #sudo systemctl enable jenkins.service
-bash /usr/local/bin/jenkins_autostart.sh
 
 # Harden sshd options
 echo "" > /etc/ssh/sshd_config
