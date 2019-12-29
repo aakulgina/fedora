@@ -39,7 +39,7 @@ lang en_AU
 xconfig --startxonboot
 
 # Configure Time Zone
-timezone Russia/Volgograd
+timezone Etc/GMT-4
 
 # Create User Account
 user --name=maxrom --password=$qwertynbvcxz --groups=wheel
