@@ -1,5 +1,5 @@
 # fedora
-#a note for future use
+a note for future use
 1. https://forums.fedoraforum.org/showthread.php?315621-How-I-Automated-a-Fedora-Install-on-a-Home-Network
 2. https://github.com/sinner-/kickstart-fedora-workstation/blob/master/workstation.ks
 3. http://mirrors.sgu.ru/fedora/linux/releases/30/Workstation/x86_64/iso/
