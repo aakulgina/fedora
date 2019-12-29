@@ -150,11 +150,12 @@ systemctl start docker.service
 curl -O https://raw.githubusercontent.com/aakulgina/fedora/master/jenkins_autostart.sh
 mv ./jenkins_autostart.sh /usr/local/bin/ 
 sudo chmod u+x /usr/local/bin/jenkins_autostart.sh
-curl -O https://raw.githubusercontent.com/aakulgina/fedora/master/jenkins.service
-mv ./jenkins.service /etc/systemd/system/
-sudo chmod 644 /etc/systemd/system/jenkins.service
-sudo systemctl daemon-reload
-sudo systemctl enable jenkins.service
+#curl -O https://raw.githubusercontent.com/aakulgina/fedora/master/jenkins.service
+#mv ./jenkins.service /etc/systemd/system/
+#sudo chmod 644 /etc/systemd/system/jenkins.service
+#sudo systemctl daemon-reload
+#sudo systemctl enable jenkins.service
+bash /usr/local/bin/jenkins_autostart.sh
 
 # Harden sshd options
 echo "" > /etc/ssh/sshd_config
