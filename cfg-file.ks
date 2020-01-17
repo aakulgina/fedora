@@ -148,7 +148,8 @@ systemctl start docker.service
 
 # Trying to Install Jenkins
 
-# Maybe now it WILL work.
+# Нихера оно не работает. Причем, что интересно, ВСЕ ТЕ ЖЕ действия, выполненные лапками из терминала, приводят к рабочему дженкинсу.
+# В чем проблема-то, ебтвоюмать.
 
 curl -O https://raw.githubusercontent.com/aakulgina/fedora/master/jenkins_autostart.sh
 mv ./jenkins_autostart.sh /usr/local/bin/
