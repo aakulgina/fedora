@@ -147,9 +147,16 @@ systemctl enable docker.service
 systemctl start docker.service
 
 # Trying to Install Jenkins
+
+# Okay, that doesn't work. Again.
+# Well, not all of it. The .sh obviously works, but only manually from the terminal.
+# There should be a problem with .service.
+# So for now we gonna comment everything in this block except getting .sh, and then try to solve it from the terminal.
+
 curl -O https://raw.githubusercontent.com/aakulgina/fedora/master/jenkins_autostart.sh
 mv ./jenkins_autostart.sh /usr/local/bin/ 
 sudo chmod u+x /usr/local/bin/jenkins_autostart.sh
+
 #curl -O https://raw.githubusercontent.com/aakulgina/fedora/master/jenkins.service
 #mv ./jenkins.service /etc/systemd/system/
 #sudo chmod 644 /etc/systemd/system/jenkins.service
