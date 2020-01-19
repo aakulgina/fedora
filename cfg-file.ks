@@ -55,7 +55,6 @@ text
 @core
 @standard
 @hardware-support
-# @base-x
 @firefox
 @fonts
 @libreoffice
@@ -71,9 +70,7 @@ git
 NetworkManager-openvpn-gnome
 keepassx
 gimp
-# gnucash
 calibre
-# irssi
 tcpdump
 ansible
 vlc
@@ -94,8 +91,6 @@ transmission-gtk
 evince
 exfat-utils
 fuse-exfat
-# jq
-# nodejs
 icedtea-web
 ristretto
 argon2
@@ -127,16 +122,6 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 set nohlsearch" > /home/sina/.vimrc
-
-# cat <<EOF > /home/sina/.bashrc
-# if [ -f /etc/bashrc ]; then
-#   . /etc/bashrc
-# fi
-# source /usr/bin/virtualenvwrapper.sh
-# export GOPATH=/home/sina/Development/go
-# export PATH=$PATH:/home/sina/Development/go/bin
-# alias irssi='firejail irssi'
-# EOF
 
 # Disable IPv6
 cat <<EOF >> /etc/sysctl.conf
