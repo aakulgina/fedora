@@ -94,9 +94,9 @@ wireshark
 ffmpeg
 system-config-printer
 git-review
-gcc-c++
+#gcc-c++
 readline-devel
-gcc-gfortran
+#gcc-gfortran
 libX11-devel
 libXt-devel
 zlib-devel
@@ -106,7 +106,7 @@ pcre-devel
 libcurl-devel
 python3-virtualenvwrapper
 python3-devel
-golang
+#golang
 libimobiledevice
 libimobiledevice-utils
 usbmuxd
@@ -115,7 +115,7 @@ mariadb-server
 transmission-gtk
 libffi-devel
 evince
-sqlite
+#sqlite
 exfat-utils
 fuse-exfat
 jq
