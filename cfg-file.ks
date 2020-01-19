@@ -61,7 +61,7 @@ text
 @libreoffice
 @multimedia
 @networkmanager-submodules
-@printing
+# @printing
 @xfce-desktop
 @development-tools
 # @python-classroom
@@ -69,7 +69,7 @@ text
 # chromium
 # java-latest-openjdk
 vim
-# git
+git
 NetworkManager-openvpn-gnome
 keepassx
 redshift-gtk
@@ -81,10 +81,10 @@ irssi
 nmap
 tcpdump
 ansible
-thunderbird
+# thunderbird
 vlc
 calc
-gitflow
+# gitflow
 gstreamer-plugins-ugly
 gstreamer1-plugins-ugly
 redhat-rpm-config
@@ -92,11 +92,9 @@ rpmconf
 strace
 wireshark
 ffmpeg
-system-config-printer
-git-review
-# gcc-c++
+# system-config-printer
+# git-review
 readline-devel
-# gcc-gfortran
 libX11-devel
 libXt-devel
 zlib-devel
@@ -104,9 +102,8 @@ bzip2-devel
 xz-devel
 pcre-devel
 libcurl-devel
-python3-virtualenvwrapper
-python3-devel
-# golang
+# python3-virtualenvwrapper
+# python3-devel
 libimobiledevice
 libimobiledevice-utils
 usbmuxd
@@ -115,7 +112,6 @@ mariadb-server
 transmission-gtk
 libffi-devel
 evince
-# sqlite
 exfat-utils
 fuse-exfat
 jq
