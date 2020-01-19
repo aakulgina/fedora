@@ -1,10 +1,11 @@
 [Unit]
-Description=Running Jenkins Script
-After=multi-user.target
+Description=Starting Jenkins
+Requires=docker.service
+After=docker.service
 
 [Service]
-Type=idle
-ExecStart=bash /usr/local/bin/jenkins_autostart.sh
+Type=simple
+ExecStart=/bin/bash /usr/bin/jenkins_autostart.sh
 
 [Install]
 WantedBy=multi=user.target
