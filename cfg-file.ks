@@ -61,27 +61,22 @@ text
 @libreoffice
 @multimedia
 @networkmanager-submodules
-# @xfce-desktop
 @development-tools
 # @python-classroom
 @gnome-desktop
-# chromium
+chromium
 # java-latest-openjdk
 vim
 git
 NetworkManager-openvpn-gnome
 keepassx
-# redshift-gtk
 gimp
 gnucash
-# duplicity
 calibre
 irssi
-# nmap
 tcpdump
 ansible
 vlc
-# calc
 gstreamer-plugins-ugly
 gstreamer1-plugins-ugly
 redhat-rpm-config
@@ -90,20 +85,17 @@ strace
 wireshark
 ffmpeg
 readline-devel
-libX11-devel
-libXt-devel
+# libX11-devel
+# libXt-devel
 zlib-devel
 bzip2-devel
 xz-devel
-pcre-devel
+# pcre-devel
 libcurl-devel
-# libimobiledevice
-# libimobiledevice-utils
 usbmuxd
-# ifuse
-mariadb-server
+# mariadb-server
 transmission-gtk
-libffi-devel
+# libffi-devel
 evince
 exfat-utils
 fuse-exfat
@@ -116,17 +108,18 @@ argon2
 
 # Post-installation Script
 %post
+
 # Install Google Chrome
-cat << EOF > /etc/yum.repos.d/google-chrome.repo
-[google-chrome]
-name=google-chrome
-baseurl=http://dl.google.com/linux/chrome/rpm/stable/x86_64
-enabled=1
-gpgcheck=1
-gpgkey=https://dl-ssl.google.com/linux/linux_signing_key.pub
-EOF
-rpm --import https://dl-ssl.google.com/linux/linux_signing_key.pub
-dnf install -y google-chrome-stable
+# cat << EOF > /etc/yum.repos.d/google-chrome.repo
+# [google-chrome]
+# name=google-chrome
+# baseurl=http://dl.google.com/linux/chrome/rpm/stable/x86_64
+# enabled=1
+# gpgcheck=1
+# gpgkey=https://dl-ssl.google.com/linux/linux_signing_key.pub
+# EOF
+# rpm --import https://dl-ssl.google.com/linux/linux_signing_key.pub
+# dnf install -y google-chrome-stable
 
 # Install Docker
 dnf -y install dnf-plugins-core
@@ -135,23 +128,12 @@ dnf -y install docker-ce docker-ce-cli containerd.io
 systemctl enable docker.service
 systemctl start docker.service
 
-# Trying to Install Jenkins
-# Im (almost) sure that it gonna work.
-
+# Install Jenkins
 curl -o /usr/bin/jenkins_autostart.sh https://raw.githubusercontent.com/aakulgina/fedora/master/jenkins_autostart.sh
 chmod +x /usr/bin/jenkins_autostart.sh
 curl -o /etc/systemd/system/runjenkins.service https://raw.githubusercontent.com/aakulgina/fedora/master/runjenkins.service
 chmod 644 /etc/systemd/system/runjenkins.service
 systemctl enable runjenkins.service
-
-#curl -O https://raw.githubusercontent.com/aakulgina/fedora/master/jenkins_autostart.sh
-#mv ./jenkins_autostart.sh /usr/local/bin/
-#curl -O https://raw.githubusercontent.com/aakulgina/fedora/master/runjenkins.service
-#mv ./runjenkins.service /lib/systemd/system/
-#sudo chmod 644 /lib/systemd/system/runjenkins.service
-#sudo systemctl daemon-reload
-#sudo systemctl enable runjenkins.service
-#sudo chmod u+x /usr/local/bin/jenkins_autostart.sh
 
 # Harden sshd options
 echo "" > /etc/ssh/sshd_config
