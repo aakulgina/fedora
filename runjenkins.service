@@ -8,4 +8,4 @@ Type=simple
 ExecStart=/bin/bash /usr/bin/jenkins_autostart.sh
 
 [Install]
-WantedBy=multi=user.target
+WantedBy=multi-user.target
