@@ -33,7 +33,7 @@ network --onboot=yes --bootproto=dhcp
 keyboard us
 
 # Configure Language During Installation
-lang en_AU
+lang en_US
 
 # Configure X Window System
 xconfig --startxonboot
@@ -148,17 +148,22 @@ systemctl start docker.service
 
 # Trying to Install Jenkins
 
-# Нихера оно не работает. Причем, что интересно, ВСЕ ТЕ ЖЕ действия, выполненные лапками из терминала, приводят к рабочему дженкинсу.
-# В чем проблема-то, ебтвоюмать.
+# Ну почему ты не работаешь. Ну все же правильно вроде бы(
 
-curl -O https://raw.githubusercontent.com/aakulgina/fedora/master/jenkins_autostart.sh
-mv ./jenkins_autostart.sh /usr/local/bin/
-curl -O https://raw.githubusercontent.com/aakulgina/fedora/master/runjenkins.service
-mv ./runjenkins.service /lib/systemd/system/
-sudo chmod 644 /lib/systemd/system/runjenkins.service
-sudo systemctl daemon-reload
-sudo systemctl enable runjenkins.service
-sudo chmod u+x /usr/local/bin/jenkins_autostart.sh
+curl -o /usr/bin/jenkins_autostart.sh https://raw.githubusercontent.com/aakulgina/fedora/master/jenkins_autostart.sh
+chmod +x /usr/bin/jenkins_autostart.sh
+curl -o /etc/systemd/system/runjenkins.service https://raw.githubusercontent.com/aakulgina/fedora/master/runjenkins.service
+chmod 644 /etc/systemd/system/runjenkins.service
+systemctl enable runjenkins.service
+
+#curl -O https://raw.githubusercontent.com/aakulgina/fedora/master/jenkins_autostart.sh
+#mv ./jenkins_autostart.sh /usr/local/bin/
+#curl -O https://raw.githubusercontent.com/aakulgina/fedora/master/runjenkins.service
+#mv ./runjenkins.service /lib/systemd/system/
+#sudo chmod 644 /lib/systemd/system/runjenkins.service
+#sudo systemctl daemon-reload
+#sudo systemctl enable runjenkins.service
+#sudo chmod u+x /usr/local/bin/jenkins_autostart.sh
 
 # Harden sshd options
 echo "" > /etc/ssh/sshd_config
