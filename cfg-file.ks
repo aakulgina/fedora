@@ -61,30 +61,27 @@ text
 @libreoffice
 @multimedia
 @networkmanager-submodules
-# @printing
-@xfce-desktop
+# @xfce-desktop
 @development-tools
 # @python-classroom
-# @GNOME Desktop Environment
+@gnome-desktop
 # chromium
 # java-latest-openjdk
 vim
 git
 NetworkManager-openvpn-gnome
 keepassx
-redshift-gtk
+# redshift-gtk
 gimp
 gnucash
-duplicity
+# duplicity
 calibre
 irssi
-nmap
+# nmap
 tcpdump
 ansible
-# thunderbird
 vlc
-calc
-# gitflow
+# calc
 gstreamer-plugins-ugly
 gstreamer1-plugins-ugly
 redhat-rpm-config
@@ -92,8 +89,6 @@ rpmconf
 strace
 wireshark
 ffmpeg
-# system-config-printer
-# git-review
 readline-devel
 libX11-devel
 libXt-devel
@@ -102,12 +97,10 @@ bzip2-devel
 xz-devel
 pcre-devel
 libcurl-devel
-# python3-virtualenvwrapper
-# python3-devel
-libimobiledevice
-libimobiledevice-utils
+# libimobiledevice
+# libimobiledevice-utils
 usbmuxd
-ifuse
+# ifuse
 mariadb-server
 transmission-gtk
 libffi-devel
@@ -143,6 +136,7 @@ systemctl enable docker.service
 systemctl start docker.service
 
 # Trying to Install Jenkins
+# Im (almost) sure that it gonna work.
 
 curl -o /usr/bin/jenkins_autostart.sh https://raw.githubusercontent.com/aakulgina/fedora/master/jenkins_autostart.sh
 chmod +x /usr/bin/jenkins_autostart.sh
