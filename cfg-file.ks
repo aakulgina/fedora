@@ -64,12 +64,12 @@ text
 @printing
 @xfce-desktop
 @development-tools
-#@python-classroom
-#@GNOME Desktop Environment
-#chromium
-#java-latest-openjdk
+# @python-classroom
+# @GNOME Desktop Environment
+# chromium
+# java-latest-openjdk
 vim
-#git
+# git
 NetworkManager-openvpn-gnome
 keepassx
 redshift-gtk
@@ -94,9 +94,9 @@ wireshark
 ffmpeg
 system-config-printer
 git-review
-#gcc-c++
+# gcc-c++
 readline-devel
-#gcc-gfortran
+# gcc-gfortran
 libX11-devel
 libXt-devel
 zlib-devel
@@ -106,7 +106,7 @@ pcre-devel
 libcurl-devel
 python3-virtualenvwrapper
 python3-devel
-#golang
+# golang
 libimobiledevice
 libimobiledevice-utils
 usbmuxd
@@ -115,7 +115,7 @@ mariadb-server
 transmission-gtk
 libffi-devel
 evince
-#sqlite
+# sqlite
 exfat-utils
 fuse-exfat
 jq
@@ -147,8 +147,6 @@ systemctl enable docker.service
 systemctl start docker.service
 
 # Trying to Install Jenkins
-
-# Ну почему ты не работаешь. Ну все же правильно вроде бы(
 
 curl -o /usr/bin/jenkins_autostart.sh https://raw.githubusercontent.com/aakulgina/fedora/master/jenkins_autostart.sh
 chmod +x /usr/bin/jenkins_autostart.sh
