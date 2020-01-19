@@ -55,25 +55,25 @@ text
 @core
 @standard
 @hardware-support
-@base-x
+# @base-x
 @firefox
 @fonts
 @libreoffice
 @multimedia
 @networkmanager-submodules
 @development-tools
-# @python-classroom
+@Python Classroom
 @gnome-desktop
 chromium
-# java-latest-openjdk
+java-openjdk
 vim
 git
 NetworkManager-openvpn-gnome
 keepassx
 gimp
-gnucash
+# gnucash
 calibre
-irssi
+# irssi
 tcpdump
 ansible
 vlc
@@ -85,22 +85,17 @@ strace
 wireshark
 ffmpeg
 readline-devel
-# libX11-devel
-# libXt-devel
 zlib-devel
 bzip2-devel
 xz-devel
-# pcre-devel
 libcurl-devel
 usbmuxd
-# mariadb-server
 transmission-gtk
-# libffi-devel
 evince
 exfat-utils
 fuse-exfat
-jq
-nodejs
+# jq
+# nodejs
 icedtea-web
 ristretto
 argon2
@@ -108,18 +103,6 @@ argon2
 
 # Post-installation Script
 %post
-
-# Install Google Chrome
-# cat << EOF > /etc/yum.repos.d/google-chrome.repo
-# [google-chrome]
-# name=google-chrome
-# baseurl=http://dl.google.com/linux/chrome/rpm/stable/x86_64
-# enabled=1
-# gpgcheck=1
-# gpgkey=https://dl-ssl.google.com/linux/linux_signing_key.pub
-# EOF
-# rpm --import https://dl-ssl.google.com/linux/linux_signing_key.pub
-# dnf install -y google-chrome-stable
 
 # Install Docker
 dnf -y install dnf-plugins-core
@@ -145,15 +128,15 @@ set shiftwidth=4
 set expandtab
 set nohlsearch" > /home/sina/.vimrc
 
-cat <<EOF > /home/sina/.bashrc
-if [ -f /etc/bashrc ]; then
-  . /etc/bashrc
-fi
-source /usr/bin/virtualenvwrapper.sh
-export GOPATH=/home/sina/Development/go
-export PATH=$PATH:/home/sina/Development/go/bin
-alias irssi='firejail irssi'
-EOF
+# cat <<EOF > /home/sina/.bashrc
+# if [ -f /etc/bashrc ]; then
+#   . /etc/bashrc
+# fi
+# source /usr/bin/virtualenvwrapper.sh
+# export GOPATH=/home/sina/Development/go
+# export PATH=$PATH:/home/sina/Development/go/bin
+# alias irssi='firejail irssi'
+# EOF
 
 # Disable IPv6
 cat <<EOF >> /etc/sysctl.conf
