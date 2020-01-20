@@ -106,12 +106,12 @@ dnf -y install docker-ce docker-ce-cli containerd.io
 systemctl enable docker.service
 systemctl start docker.service
 
-# Install Jenkins
-curl -o /usr/bin/jenkins_autostart.sh https://raw.githubusercontent.com/aakulgina/fedora/master/jenkins_autostart.sh
-chmod +x /usr/bin/jenkins_autostart.sh
-curl -o /etc/systemd/system/runjenkins.service https://raw.githubusercontent.com/aakulgina/fedora/master/runjenkins.service
-chmod 644 /etc/systemd/system/runjenkins.service
-systemctl enable runjenkins.service
+# Install Jenkins and Gerrit Code Review
+curl -o /usr/bin/gerrit_jenkins_start.sh https://raw.githubusercontent.com/aakulgina/fedora/master/gerrit_jenkins_start.sh
+chmod +x /usr/bin/gerrit_jenkins_start.sh
+curl -o /etc/systemd/system/gerritjenkinsrun.service https://raw.githubusercontent.com/aakulgina/fedora/master/gerritjenkinsrun.service
+chmod 644 /etc/systemd/system/gerritjenkinsrun.service
+systemctl enable gerritjenkinsrun.service
 
 # Harden sshd options
 echo "" > /etc/ssh/sshd_config
