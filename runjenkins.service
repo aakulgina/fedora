@@ -1,11 +1,11 @@
 [Unit]
-Description=Starting Jenkins
+Description=Starting Jenkins and Gerrit
 Requires=docker.service
 After=docker.service
 
 [Service]
 Type=simple
-ExecStart=/bin/bash /usr/bin/jenkins_autostart.sh
+ExecStart=/bin/bash /usr/bin/gerrit_jenkins_start.sh
 
 [Install]
 WantedBy=multi-user.target
