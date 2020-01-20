@@ -71,7 +71,6 @@ NetworkManager-openvpn-gnome
 keepassx
 gimp
 calibre
-# tcpdump
 ansible
 vlc
 gstreamer-plugins-ugly
@@ -79,12 +78,7 @@ gstreamer1-plugins-ugly
 redhat-rpm-config
 rpmconf
 strace
-# wireshark
-# ffmpeg
 readline-devel
-# zlib-devel
-# bzip2-devel
-# xz-devel
 libcurl-devel
 usbmuxd
 transmission-gtk
@@ -93,7 +87,6 @@ exfat-utils
 fuse-exfat
 icedtea-web
 ristretto
-# argon2
 %end
 
 # Post-installation Script
