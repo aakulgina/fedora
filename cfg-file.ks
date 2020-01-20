@@ -71,7 +71,7 @@ NetworkManager-openvpn-gnome
 keepassx
 gimp
 calibre
-tcpdump
+# tcpdump
 ansible
 vlc
 gstreamer-plugins-ugly
@@ -79,12 +79,12 @@ gstreamer1-plugins-ugly
 redhat-rpm-config
 rpmconf
 strace
-wireshark
-ffmpeg
+# wireshark
+# ffmpeg
 readline-devel
-zlib-devel
-bzip2-devel
-xz-devel
+# zlib-devel
+# bzip2-devel
+# xz-devel
 libcurl-devel
 usbmuxd
 transmission-gtk
@@ -93,7 +93,7 @@ exfat-utils
 fuse-exfat
 icedtea-web
 ristretto
-argon2
+# argon2
 %end
 
 # Post-installation Script
@@ -147,6 +147,3 @@ systemctl disable geoclue
 systemctl disable ModemManager
 sed -i 's/Disabled=false/Disabled=true/g' /etc/xdg/tumbler/tumbler.rc
 %end
-
-# Reboot After Installation
-# reboot --eject
